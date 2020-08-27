@@ -89,7 +89,7 @@ def del_logs(ssh, result, HOST):
         try:
                 ssh.send('delete disk0:/syslog/LOG-*\n')
                 time.sleep(1)
-                for _ in range(len(result)):
+                for _ in range(len(result)-1):
                         ssh.send('\n')
                         ssh.sleep(1)
                 ssh.send('exit\n')
