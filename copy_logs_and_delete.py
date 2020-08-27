@@ -91,7 +91,7 @@ def del_logs(ssh, result, HOST):
                 time.sleep(1)
                 for _ in range(len(result)-1):
                         ssh.send('\n')
-                        ssh.sleep(1)
+                        time.sleep(1)
                 ssh.send('exit\n')
                 ssh.close()
         except:
